@@ -74,6 +74,7 @@ If you want your controller to be named differently, please update your `routes.
 
 Run your application and:
 * complete step __2. Setup Webhook__ from [this tutorial](https://developers.facebook.com/docs/messenger-platform/quickstart#steps) - _if you mounted `Messenger::Engine` at `/messenger` and your application can be found at `https://example.com`, your `Callback URL` will be `https://example.com/messenger/webhook`_
+ * select `message_deliveries`, `messages`, `messaging_optins` and `messaging_postbacks` under Subscription Fields
 * visit `/messenger/subscribe` in your app (it's replacement for __[4. Subscribe the App to the Page](https://developers.facebook.com/docs/messenger-platform/quickstart#steps)__ step) - call `subscribe` action anytime you want to refresh subscription of your app
 
 ## Usage
