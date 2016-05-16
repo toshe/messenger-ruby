@@ -6,6 +6,10 @@
 
 A simple library for supporting implementation of [Facebook Messenger Bot](https://developers.facebook.com/products/messenger/) in Ruby on Rails.
 
+## Requirments
+
+ruby 2.2
+
 ## Installation
 
 Add this line to your application's Gemfile:
