@@ -13,7 +13,7 @@ module Messenger
       end
 
       def build_attachments(attachments)
-        attachments.map { |attachment| Attachment.new(attachment.symbolize_keys) }
+        attachments.map { |attachment| Attachment.new(attachment.symbolize_keys.slice(:type, :payload)) }
       end
     end
   end
