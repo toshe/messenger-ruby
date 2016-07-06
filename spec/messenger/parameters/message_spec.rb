@@ -63,6 +63,9 @@ module Messenger
             described_class.new(
               mid: "abc",
               seq: 10,
+              is_echo: true,
+              app_id: "123",
+              metadata: "007",
               attachments: [
                 { type: 'image', payload: { 'url' => 'abc' } },
                 { type: 'audio', payload: { 'url' => 'xyz' } },
