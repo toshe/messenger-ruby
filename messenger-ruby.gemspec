@@ -26,6 +26,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec-rails'
   spec.add_development_dependency 'webmock'
   spec.add_development_dependency "pry"
-  spec.add_development_dependency "rails"
+  spec.add_development_dependency "rails", "~> 4.2.6"
   spec.add_development_dependency "codeclimate-test-reporter"
 end
