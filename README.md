@@ -459,7 +459,7 @@ Attribute | Additional info
 --------- | ---------------
 sender_id | String
 recipient_id | String
-callback | [Messenger::Parameters::Message](#message)/[Messenger::Parameters::Delivery](#delivery)/[Messenger::Parameters::Optin](#optin)/[Messenger::Parameters::Delivery](#postback)/[Messenger::Parameters::Read](#read)/[Messenger::Parameters::AccountLinking](#account_linking) object
+callback | [Messenger::Parameters::Message](#message), [Messenger::Parameters::Delivery](#delivery), [Messenger::Parameters::Optin](#optin), [Messenger::Parameters::Delivery](#postback), [Messenger::Parameters::Read](#read) or [Messenger::Parameters::AccountLinking](#account_linking) object
 
 Callback responds to following methods to help detect types:
 
