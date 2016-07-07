@@ -75,6 +75,34 @@ module Messenger
             expect(subject.callback).to be_an(Postback)
           end
         end
+
+        describe 'read is present' do
+          subject do
+            described_class.new(
+              sender: { 'id' => '1234' },
+              recipient: { 'id' => '5678' },
+              read: { watermark: "abc", seq: "xyz" }
+            )
+          end
+
+          it 'creates Read object as callback' do
+            expect(subject.callback).to be_an(Read)
+          end
+        end
+
+        describe 'account_linking is present' do
+          subject do
+            described_class.new(
+              sender: { 'id' => '1234' },
+              recipient: { 'id' => '5678' },
+              account_linking: { status: "abc", authorization_code: "xyz" }
+            )
+          end
+
+          it 'creates AccountLinking object as callback' do
+            expect(subject.callback).to be_an(AccountLinking)
+          end
+        end
       end
     end
   end
