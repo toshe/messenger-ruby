@@ -2,14 +2,14 @@ require 'spec_helper'
 
 module Messenger
   module Parameters
-    describe Optin do
+    describe AccountLinking do
       subject do
-        described_class.new(ref: "abc")
+        described_class.new(status: 123, authorization_code: "xyz")
       end
 
       describe '#type' do
-        it 'includes `optin`' do
-          expect(subject.type).to include 'optin'
+        it 'includes `account_linking`' do
+          expect(subject.type).to include 'account_linking'
         end
       end
 
@@ -26,8 +26,8 @@ module Messenger
       end
 
       describe '#optin?' do
-        it 'returns true' do
-          expect(subject.optin?).to eq true
+        it 'returns false' do
+          expect(subject.optin?).to eq false
         end
       end
 
@@ -38,8 +38,8 @@ module Messenger
       end
 
       describe '#account_linking?' do
-        it 'returns false' do
-          expect(subject.account_linking?).to eq false
+        it 'returns true' do
+          expect(subject.account_linking?).to eq true
         end
       end
 

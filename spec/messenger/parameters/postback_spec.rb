@@ -36,6 +36,18 @@ module Messenger
           expect(subject.postback?).to eq true
         end
       end
+
+      describe '#account_linking?' do
+        it 'returns false' do
+          expect(subject.account_linking?).to eq false
+        end
+      end
+
+      describe '#read?' do
+        it 'returns false' do
+          expect(subject.read?).to eq false
+        end
+      end
     end
   end
 end

@@ -2,14 +2,14 @@ require 'spec_helper'
 
 module Messenger
   module Parameters
-    describe Optin do
+    describe Read do
       subject do
-        described_class.new(ref: "abc")
+        described_class.new(watermark: "abc", seq: 10)
       end
 
       describe '#type' do
-        it 'includes `optin`' do
-          expect(subject.type).to include 'optin'
+        it 'includes `read`' do
+          expect(subject.type).to include 'read'
         end
       end
 
@@ -26,8 +26,8 @@ module Messenger
       end
 
       describe '#optin?' do
-        it 'returns true' do
-          expect(subject.optin?).to eq true
+        it 'returns false' do
+          expect(subject.optin?).to eq false
         end
       end
 
@@ -44,8 +44,8 @@ module Messenger
       end
 
       describe '#read?' do
-        it 'returns false' do
-          expect(subject.read?).to eq false
+        it 'returns true' do
+          expect(subject.read?).to eq true
         end
       end
     end

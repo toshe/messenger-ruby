@@ -31,6 +31,8 @@ require "messenger/parameters/attachment"
 require "messenger/parameters/callback"
 require "messenger/parameters/entry"
 require "messenger/parameters/messaging"
+require "messenger/parameters/read"
+require "messenger/parameters/account_linking"
 
 require "messenger/parameters/delivery"
 require "messenger/parameters/message"

@@ -442,14 +442,61 @@ end
 
 ### fb_params
 
-Has control over entries. Especially `callback` attribute of `messaging` instance has following methods:
+Has control over entries received from Facebook API. For more informations please visit Messenger Platform Docs. `fb_params` includes array of Entry objects.
 
-* `message?`
-* `delivery?`
-* `postback?`
-* `optin?`
-* `attachments`
-* `text`
+#### Entry
+
+Attribute | Additional info
+----------| ---------------
+id | String, unique for conversation
+time | String, timestamp format
+messagings | Array of [Messenger::Parameters::Messaging](#messaging) objects
+
+
+#### Messaging
+
+Attribute | Additional info
+--------- | ---------------
+sender_id | String
+recipient_id | String
+callback | [Messenger::Parameters::Message](#message), [Messenger::Parameters::Delivery](#delivery), [Messenger::Parameters::Optin](#optin), [Messenger::Parameters::Delivery](#postback), [Messenger::Parameters::Read](#read) or [Messenger::Parameters::AccountLinking](#account_linking) object
+
+Callback responds to following methods to help detect types:
+
+Method | Type returned
+------ | -------------
+message? | Boolean
+delivery? | Boolean
+optin? | Boolean
+postback? | Boolean
+read? | Boolean
+account_linking? | Boolean
+
+#### Message
+
+Attribute | Additional info
+----------| ---------------
+mid |
+seq |
+sticker_id |
+text |
+attachments | Array of [Messenger::Parameters::Attachment](#attachment) objects
+is_echo |
+app_id |
+metadata |
+
+#### Attachment
+
+#### Delivery
+
+#### Optin
+
+#### Postback
+
+#### Read
+
+#### Account Linking
+
 
 Example usage:
 
