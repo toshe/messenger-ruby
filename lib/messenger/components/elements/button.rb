@@ -18,7 +18,7 @@ module Messenger
       end
 
       def phone_number
-        { phone_number: @value }
+        { payload: @value }
       end
 
       def postback
